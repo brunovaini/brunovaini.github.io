@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋月真理奈 - 官方人物资料与作品档案</title>
+    <meta name="description" content="秋月真理奈 - 详尽的人物生平、演艺作品、影视作品及个人资料库，记录其演艺生涯与经典角色。">
+    <meta name="keywords" content="秋月真理奈,人物资料,影视作品,演艺生涯,角色档案">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f13;
+            --card-bg: #1a1a20;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-color: #c0a062; /* 金色系，体现优雅与经典感 */
+            --accent-hover: #d4b368;
+            --border-color: #2a2a35;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-sm);
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(15, 15, 19, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            color: var(--text-main);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(to right, rgba(15,15,19,0.9) 0%, rgba(15,15,19,0.4) 100%), 
+                        url('https://picsum.photos/seed/marina/1920/1080') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #000;
+            padding: 4px 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: var(--spacing-md);
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: var(--spacing-lg);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: var(--spacing-md);
+        }
+
+        .stat-item strong {
+            display: block;
+            font-size: 1.25rem;
+            color: #fff;
+        }
+
+        .stat-item span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Biography Section */
+        .bio-section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: var(--spacing-lg);
+            align-items: start;
+        }
+
+        .profile-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: var(--spacing-lg);
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto var(--spacing-md);
+            border: 3px solid var(--accent-color);
+            overflow: hidden;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .profile-bio {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: var(--spacing-md);
+        }
+
+        .info-table td {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .info-table td:first-child {
+            color: var(--text-muted);
+            width: 120px;
+            font-weight: 500;
+        }
+
+        .bio-text {
+            color: var(--text-main);
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .bio-text p {
+            margin-bottom: var(--spacing-md);
+        }
+
+        /* Works Section */
+        .works-section {
+            background-color: #15151a;
+            padding: var(--spacing-lg) 0;
+        }
+
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .work-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: var(--accent-color);
+        }
+
+        .work-poster {
+            height: 400px;
+            width: 100%;
+            background-color: #2a2a35;
+            position: relative;
+        }
+        
+        .work-poster img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .work-year {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0,0,0,0.7);
+            color: #fff;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            border-radius: 4px;
+        }
+
+        .work-info {
+            padding: var(--spacing-md);
+        }
+
+        .work-title {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-sm);
+            color: #fff;
+        }
+
+        .work-role {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .work-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: var(--spacing-lg) 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 200px);
+            gap: var(--spacing-sm);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+        .gallery-item:nth-child(2) { grid-column: span 1; }
+        .gallery-item:nth-child(3) { grid-column: span 1; }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0c;
+            padding: var(--spacing-lg) 0;
+            margin-top: var(--spacing-lg);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: var(--spacing-md);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: var(--spacing-lg);
+            padding-top: var(--spacing-md);
+            border-top: 1px solid #1a1a20;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero h1 { font-size: 2.5rem; }
+            .bio-grid { grid-template-columns: 1fr; }
+            .profile-card { display: flex; flex-direction: row; text-align: left; gap: var(--spacing-md); align-items: center; }
+            .profile-img { width: 80px; height: 80px; margin: 0; flex-shrink: 0; }
+            .profile-bio { display: none; }
+            .nav-container nav { display: none; } /* Simplified mobile nav for demo */
+            .mobile-menu-btn { display: block; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+            .gallery-item:nth-child(1) { grid-column: span 2; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-container">
+        <div class="logo">Marina<span>Archive</span></div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">人物主页</a></li>
+                <li><a href="#works">代表作品</a></li>
+                <li><a href="#gallery">影像图集</a></li>
+                <li><a href="#news">动态资讯</a></li>
+            </ul>
+        </nav>
+        <button class="mobile-menu-btn">☰</button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">Profile</span>
+                <h1>秋月真理奈</h1>
+                <p>日本知名演员及模特，以其独特的气质和精湛的演技在影视界拥有极高的知名度，代表作涵盖都市情感与悬疑题材。</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>15+</strong>
+                        <span>年演艺生涯</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>20+</strong>
+                        <span>主演影视作品</span>
+                    </div>
+                    <div class="stat-item">
+                        <strong>5</strong>
+                        <span>最佳女主角奖</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Biography Section -->
+    <section class="bio-section container">
+        <div class="section-title">
+            <h2><span>人物</span>档案</h2>
+        </div>
+        <div class="bio-grid">
+            <aside class="profile-card">
+                <div class="profile-img">
+                    <img src="https://picsum.photos/seed/marina2/400/400" alt="秋月真理奈肖像">
+                </div>
+                <h3 class="profile-name">秋月 真理奈</h3>
+                <p class="profile-bio">1985年出生于东京都，毕业于早稻田大学文学部。</p>
+                <div style="margin-top: 20px;">
+                    <a href="#" style="display:block; padding: 8px; background:var(--accent-color); color:#000; text-align:center; border-radius:4px; font-weight:bold;">加入关注</a>
+                </div>
+            </aside>
+            <article class="bio-content">
+                <h3>职业生涯概述</h3>
+                <p class="bio-text">
+                    秋月真理奈于2004年以模特身份出道，凭借清新自然的风格迅速在时尚界崭露头角。随后她转型进军影视圈，凭借在电影《时间的彼岸》中的出色表现获得了广泛关注。她的演技风格细腻多变，能够驾驭从清纯少女到成熟职场女性的多种角色，被业界誉为“百变戏骨”。
+                </p>
+                <p class="bio-text">
+                    在过去的十余年中，她不仅活跃于大银幕，也频繁参与电视剧的拍摄，多部作品收视率均名列前茅。除了演艺事业，她还积极投身于慈善公益活动，关注儿童教育问题。
+                </p>
+                <table class="info-table">
+                    <tr>
+                        <td>出生日期</td>
+                        <td>1985年6月12日</td>
+                    </tr>
+                    <tr>
+                        <td>出生地</td>
+                        <td>日本东京都</td>
+                    </tr>
+                    <tr>
+                        <td>身高/三围</td>
+                        <td>168cm / 82-58-86</td>
+                    </tr>
+                    <tr>
+                        <td>经纪公司</td>
+                        <td>星辉娱乐 (Xinghui Entertainment)</td>
+                    </tr>
+                    <tr>
+                        <td>代表色</td>
+                        <td>玫瑰金</td>
+                    </tr>
+                </table>
+            </article>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="works-section">
+        <div class="container">
+            <div class="section-title">
+                <h2><span>代表</span>作品</h2>
+                <a href="#" style="font-size: 0.9rem; color: var(--text-muted);">查看全部 &rarr;</a>
+            </div>
+            <div class="works-grid">
+                <!-- Work 1 -->
+                <article class="work-card">
+                    <div class="work-poster">
+                        <img src="https://picsum.photos/seed/movie1/400/600" alt="《时间的彼岸》海报">
+                        <span class="work-year">2012</span>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">时间的彼岸</h3>
+                        <p class="work-role">饰演：林雅静</p>
+                        <p class="work-desc">一部关于时空穿越与情感救赎的文艺电影，秋月真理奈凭借此片获得第35届日本电影学院奖最佳女主角提名。</p>
+                    </div>
+                </article>
+
+                <!-- Work 2 -->
+                <article class="work-card">
+                    <div class="work-poster">
+                        <img src="https://picsum.photos/seed/movie2/400/600" alt="《城市边缘》海报">
+                        <span class="work-year">2015</span>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">城市边缘</h3>
+                        <p class="work-role">饰演：苏菲</p>
+                        <p class="work-desc">讲述都市女性在职场与家庭间挣扎的现实主义题材剧集，收视率打破当季纪录。</p>
+                    </div>
+                </article>
+
+                <!-- Work 3 -->
+                <article class="work-card">
+                    <div class="work-poster">
+                        <img src="https://picsum.photos/seed/movie3/400/600" alt="《无声的证言》海报">
+                        <span class="work-year">2018</span>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">无声的证言</h3>
+                        <p class="work-role">饰演：佐藤美咲</p>
+                        <p class="work-desc">悬疑推理剧，秋月真理奈挑战高智商犯罪心理学家角色，演技获得观众一致好评。</p>
+                    </div>
+                </article>
+
+                <!-- Work 4 -->
+                <article class="work-card">
+                    <div class="work-poster">
+                        <img src="https://picsum.photos/seed/movie4/400/600" alt="《爱在黄昏》海报">
+                        <span class="work-year">2021</span>
+                    </div>
+                    <div class="work-info">
+                        <h3 class="work-title">爱在黄昏</h3>
+                        <p class="work-role">饰演：由美子</p>
+                        <p class="work-desc">温情治愈系爱情电影，展现中年爱情的细腻与坚韧。</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section container">
+        <div class="section-title">
+            <h2><span>影像</span>图集</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/g1/800/800" alt="红毯活动">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/g2/400/400" alt="杂志封面">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/g3/400/400" alt="拍摄现场">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/g4/400/400" alt="颁奖礼">
+            </div>
+            <div class="gallery-item">
+                <img src="https://picsum.photos/seed/g5/400/400" alt="工作照">
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="container" style="padding-bottom: var(--spacing-lg);">
+        <div class="section-title">
+            <h2><span>最新</span>动态</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--spacing-md);">
+            <article style="display: flex; gap: var(--spacing-md); padding: var(--spacing-md); background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color);">
+                <div style="width: 200px; height: 120px; background: #2a2a35; border-radius: 4px; flex-shrink: 0;">
+                    <img src="https://picsum.photos/seed/news1/200/120" alt="新闻配图">
+                </div>
+                <div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 8px;"><a href="#">秋月真理奈新片《深海之梦》定档明年夏季，首次挑战深海题材</a></h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">据悉，秋月真理奈将在片中饰演一名深海探险家，为了角色需要，她将接受长达三个月的潜水训练...</p>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px; display: block;">2023年10月24日</span>
+                </div>
+            </article>
+            <article style="display: flex; gap: var(--spacing-md); padding: var(--spacing-md); background: var(--card-bg); border-radius: 8px; border: 1px solid var(--border-color);">
+                <div style="width: 200px; height: 120px; background: #2a2a35; border-radius: 4px; flex-shrink: 0;">
+                    <img src="https://picsum.photos/seed/news2/200/120" alt="新闻配图">
+                </div>
+                <div>
+                    <h3 style="font-size: 1.1rem; margin-bottom: 8px;"><a href="#">荣获年度最具影响力女演员奖，感谢粉丝一路支持</a></h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">在近日举行的亚洲影视盛典上，秋月真理奈凭借其在多部作品中的突破性表现，成功斩获这一荣誉...</p>
+                    <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 10px; display: block;">2023年09月15日</span>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于档案</h4>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">
+                    本站致力于为粉丝提供关于秋月真理奈的全面资料整理与资讯服务，内容仅供参考。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">人物简介</a></li>
+                    <li><a href="#">影视作品</a></li>
+                    <li><a href="#">人物评价</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>友情链接</h4>
+                <ul>
+                    <li><a href="#">星辉娱乐官网</a></li>
+                    <li><a href="#">日本电影协会</a></li>
+                    <li><a href="#">时尚杂志社</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 秋月真理奈人物档案站. All Rights Reserved.
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
