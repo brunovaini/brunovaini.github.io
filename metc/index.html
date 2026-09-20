@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metcn人体-专业人体解剖与医学美学展示平台</title>
+    <meta name="description" content="metcn人体专注于人体解剖结构、医学美学与人体形态展示，提供高清人体图谱、肌肉解剖图解及人体艺术摄影赏析，服务于医学生、艺术家及医学爱好者。">
+    <meta name="keywords" content="metcn人体, 人体解剖, 肌肉解剖, 人体艺术, 医学美学, 身体结构">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-actions button {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .nav-actions button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #e0f7fa 0%, #e3f2fd 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto var(--spacing-lg);
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--accent-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 核心分类 */
+        .section-title {
+            text-align: center;
+            margin: 40px 0 30px;
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img-placeholder {
+            width: 100%;
+            height: 180px;
+            background-color: #e0e0e0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 3rem;
+        }
+
+        .card-body {
+            padding: var(--spacing-md);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-md);
+            flex: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #eee;
+            padding-top: var(--spacing-sm);
+        }
+
+        .card-link {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        /* 数据展示区 */
+        .stats-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+            gap: var(--spacing-lg);
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+            color: var(--accent-color);
+        }
+
+        .stat-item p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* 使用指南/FAQ */
+        .guide-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .guide-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guide-item {
+            display: flex;
+            gap: var(--spacing-md);
+            margin-bottom: var(--spacing-lg);
+        }
+
+        .guide-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(52, 152, 219, 0.1);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        .guide-content h3 {
+            margin-bottom: var(--spacing-sm);
+            color: var(--primary-color);
+        }
+
+        .guide-content p {
+            color: var(--text-secondary);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            font-size: 0.9rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* 简化处理，移动端隐藏菜单 */
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: var(--spacing-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span>M</span>ETCN
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">解剖图谱</a>
+                <a href="#">肌肉详解</a>
+                <a href="#">人体艺术</a>
+                <a href="#">医学资料</a>
+            </nav>
+            <div class="nav-actions">
+                <button>搜索资源</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero 区域 -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索人体奥秘：metcn人体</h1>
+                <p>汇聚专业人体解剖结构图解、医学美学展示与人体形态分析。为医学生、艺术家及解剖爱好者提供权威、高清的视觉参考。</p>
+                <div class="hero-tags">
+                    <span class="tag">高清解剖图</span>
+                    <span class="tag">肌肉系统</span>
+                    <span class="tag">骨骼结构</span>
+                    <span class="tag">医学美学</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据统计 -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>高清解剖模型</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>1000+</h3>
+                        <p>肌肉与骨骼详解</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>50K+</h3>
+                        <p>专业用户访问</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24h</h3>
+                        <p>持续更新维护</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 核心栏目 -->
+        <section class="container">
+            <h2 class="section-title">核心资源分类</h2>
+            <div class="grid-layout">
+                <!-- 卡片 1 -->
+                <article class="card">
+                    <div class="card-img-placeholder">🦴</div>
+                    <div class="card-body">
+                        <h3 class="card-title">骨骼系统图谱</h3>
+                        <p class="card-desc">全面展示人体全身骨骼结构，包括头骨、脊柱、四肢骨骼的详细形态与连接关系，支持旋转查看。</p>
+                        <div class="card-footer">
+                            <span class="tag">系统解剖</span>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 2 -->
+                <article class="card">
+                    <div class="card-img-placeholder">💪</div>
+                    <div class="card-body">
+                        <h3 class="card-title">深层肌肉解析</h3>
+                        <p class="card-desc">针对运动解剖学需求，深度剖析深层肌肉群、筋膜系统及神经走向，辅助专业训练指导。</p>
+                        <div class="card-footer">
+                            <span class="tag">运动解剖</span>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 3 -->
+                <article class="card">
+                    <div class="card-img-placeholder">🎨</div>
+                    <div class="card-body">
+                        <h3 class="card-title">人体艺术摄影</h3>
+                        <p class="card-desc">融合医学美学与摄影艺术，展示人体线条之美，强调人体结构比例与光影结合。</p>
+                        <div class="card-footer">
+                            <span class="tag">艺术赏析</span>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 卡片 4 -->
+                <article class="card">
+                    <div class="card-img-placeholder">🧬</div>
+                    <div class="card-body">
+                        <h3 class="card-title">医学影像参考</h3>
+                        <p class="card-desc">提供CT、MRI等医学影像的基础对比，帮助理解人体内部器官的解剖位置与形态。</p>
+                        <div class="card-footer">
+                            <span class="tag">医学影像</span>
+                            <a href="#" class="card-link">查看详情 &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 使用指南 -->
+        <section class="guide-section">
+            <div class="container">
+                <h2 class="section-title">使用指南与常见问题</h2>
+                <div class="guide-list">
+                    <div class="guide-item">
+                        <div class="guide-icon">1</div>
+                        <div class="guide-content">
+                            <h3>如何高效使用解剖图库？</h3>
+                            <p>建议结合三维旋转视图与二维平面图对照学习。对于初学者，可先从整体骨骼框架入手，再逐步深入至肌肉附着点。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">2</div>
+                        <div class="guide-content">
+                            <h3>内容是否适用于专业医考？</h3>
+                            <p>本站内容基于标准解剖学教材整理，适用于医学本科基础解剖学习，但具体临床应用请参考最新医学指南。</p>
+                        </div>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">3</div>
+                        <div class="guide-content">
+                            <h3>艺术创作如何利用这些素材？</h3>
+                            <p>艺术家可利用本站的高清人体结构图作为模特参考，注意区分解剖结构与艺术夸张表现的区别。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于 metcn人体</h4>
+                    <p>致力于提供最专业、最全面的人体解剖与医学美学资源，连接科学与艺术。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>资源栏目</h4>
+                    <ul>
+                        <li><a href="#">骨骼系统</a></li>
+                        <li><a href="#">肌肉系统</a></li>
+                        <li><a href="#">内脏器官</a></li>
+                        <li><a href="#">神经系统</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>学习支持</h4>
+                    <ul>
+                        <li><a href="#">使用教程</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系合作</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <p>获取最新解剖图解与学术资讯。</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 metcn人体 All Rights Reserved. 仅供学习交流使用。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                      </html>
