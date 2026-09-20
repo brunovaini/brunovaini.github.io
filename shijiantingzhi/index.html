@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间停止系列 - 热门时间停止题材作品推荐与阅读指南</title>
+    <meta name="description" content="本站提供时间停止题材（Time Stop）的精选作品推荐、阅读指南及深度解析，涵盖动漫、漫画、小说及影视中的时间静止概念与剧情探讨。">
+    <meta name="keywords" content="时间停止系列, 时间静止, 时间停止题材, 时间停止漫画, 时间停止动漫, 时间停止小说, 时间停止影视">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* 内容区布局 */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        /* 卡片通用样式 */
+        .section-title {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .section-title a:hover {
+            color: var(--accent-color);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .work-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .work-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-cover {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* 侧边栏样式 */
+        aside .widget {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .rank-list li:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .rank-num {
+            width: 24px;
+            height: 24px;
+            background-color: #eee;
+            color: #666;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background-color: #ff4757; color: white; }
+        .rank-list li:nth-child(2) .rank-num { background-color: #ff6b81; color: white; }
+        .rank-list li:nth-child(3) .rank-num { background-color: #ffa502; color: white; }
+
+        .rank-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .rank-info span {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* 专题区 */
+        .topic-section {
+            margin-bottom: 60px;
+        }
+
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .topic-card {
+            position: relative;
+            height: 250px;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            color: white;
+            cursor: pointer;
+        }
+
+        .topic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            z-index: 1;
+        }
+
+        .topic-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .topic-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .topic-content {
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        .topic-title {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+        }
+
+        /* 概念解析区 */
+        .concept-section {
+            background-color: #eef2f5;
+            padding: 60px 0;
+            margin-bottom: 60px;
+        }
+
+        .concept-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .concept-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .concept-text p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+
+        .concept-steps {
+            margin-top: 30px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .step-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: var(--primary-color);
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .concept-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>⏱</span> 时间停止系列
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门榜单</a></li>
+                    <li><a href="#">漫画专区</a></li>
+                    <li><a href="#">动漫解析</a></li>
+                    <li><a href="#">小说推荐</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索作品、作者或剧情...">
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>探索时间停止的无限可能</h1>
+            <p>从日常的奇妙遭遇到宏大的时间战争，为您盘点全球范围内最受欢迎的“时间停止”题材作品。</p>
+            <div class="hero-tags">
+                <span class="tag">#都市异能</span>
+                <span class="tag">#奇幻冒险</span>
+                <span class="tag">#恋爱喜剧</span>
+                <span class="tag">#深度解析</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- 精选专题 -->
+        <section class="topic-section">
+            <div class="section-title">
+                <h2>本周精选专题</h2>
+                <a href="#">查看更多专题 &rarr;</a>
+            </div>
+            <div class="topic-grid">
+                <article class="topic-card">
+                    <img src="https://picsum.photos/seed/time1/600/400" alt="时间停止题材发展史">
+                    <div class="topic-content">
+                        <h3 class="topic-title">时间停止题材发展史</h3>
+                        <p>从早期漫画到现代影视，探讨该题材的演变与巅峰。</p>
+                    </div>
+                </article>
+                <article class="topic-card">
+                    <img src="https://picsum.photos/seed/time2/600/400" alt="时间停止中的心理博弈">
+                    <div class="topic-content">
+                        <h3 class="topic-title">时间停止中的心理博弈</h3>
+                        <p>主角在静止世界中的孤独与选择，对人性有何隐喻？</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <div class="main-grid">
+            <!-- 左侧主要内容 -->
+            <section class="content-area">
+                <div class="section-title">
+                    <h2>热门推荐作品</h2>
+                    <a href="#">浏览全部 &rarr;</a>
+                </div>
+                
+                <div class="card-grid">
+                    <!-- 作品卡片 1 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/manga1/300/420" alt="作品封面" class="card-cover">
+                        <div class="card-body">
+                            <h3 class="card-title">我的青春恋爱物语果然有问题（时间线分支）</h3>
+                            <div class="card-meta">
+                                <span>类型：校园 / 异能</span>
+                                <span>热度：⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p class="card-desc">在平行世界中，比企谷八幡获得了短暂的时间停止能力。这让他能够改变过去，但每一次改变都带来了意想不到的蝴蝶效应，考验着他对“正确”与“幸福”的定义。</p>
+                            <a href="#" class="btn">阅读详情</a>
+                        </div>
+                    </article>
+
+                    <!-- 作品卡片 2 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/manga2/300/420" alt="作品封面" class="card-cover">
+                        <div class="card-body">
+                            <h3 class="card-title">绝对时间停止：无限回廊</h3>
+                            <div class="card-meta">
+                                <span>类型：科幻 / 悬疑</span>
+                                <span>热度：⭐⭐⭐⭐</span>
+                            </div>
+                            <p class="card-desc">主角意外发现了一个能够暂停时间的神秘装置。在这个静止的维度里，他不仅要面对来自未来的追杀，还要解开世界被锁定的真相。</p>
+                            <a href="#" class="btn">阅读详情</a>
+                        </div>
+                    </article>
+
+                    <!-- 作品卡片 3 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/manga3/300/420" alt="作品封面" class="card-cover">
+                        <div class="card-body">
+                            <h3 class="card-title">静止的华尔兹</h3>
+                            <div class="card-meta">
+                                <span>类型：奇幻 / 短篇</span>
+                                <span>热度：⭐⭐⭐⭐⭐</span>
+                            </div>
+                            <p class="card-desc">一段关于舞蹈与时间的唯美故事。当世界随着节拍静止，唯有主角与舞伴在舞池中旋转，诉说着无法言说的爱意。</p>
+                            <a href="#" class="btn">阅读详情</a>
+                        </div>
+                    </article>
+
+                    <!-- 作品卡片 4 -->
+                    <article class="work-card">
+                        <img src="https://picsum.photos/seed/manga4/300/420" alt="作品封面" class="card-cover">
+                        <div class="card-body">
+                            <h3 class="card-title">时间管理者日志</h3>
+                            <div class="card-meta">
+                                <span>类型：职场 / 喜剧</span>
+                                <span>热度：⭐⭐⭐</span>
+                            </div>
+                            <p class="card-desc">一份看似普通的职场日记，记录了主角作为“时间管理局”员工处理各种时间停滞事件的日常，充满了荒诞与幽默。</p>
+                            <a href="#" class="btn">阅读详情</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 右侧侧边栏 -->
+            <aside class="sidebar">
+                <div class="widget">
+                    <h4 class="widget-title">排行榜 TOP 5</h4>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <div class="rank-info">
+                                <h4>我的时间停止系统</h4>
+                                <span>点击 12.5万</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <div class="rank-info">
+                                <h4>静止的第25小时</h4>
+                                <span>点击 10.2万</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <div class="rank-info">
+                                <h4>时间回溯的代价</h4>
+                                <span>点击 9.8万</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <div class="rank-info">
+                                <h4>绝对领域：静止时刻</h4>
+                                <span>点击 8.5万</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <div class="rank-info">
+                                <h4>被时间遗忘的少年</h4>
+                                <span>点击 7.1万</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h4 class="widget-title">热门标签</h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" style="background:#eee; padding:4px 10px; border-radius:4px; font-size:0.85rem;">时间静止</a>
+                        <a href="#" style="background:#eee; padding:4px 10px; border-radius:4px; font-size:0.85rem;">时间倒流</a>
+                        <a href="#" style="background:#eee; padding:4px 10px; border-radius:4px; font-size:0.85rem;">异能觉醒</a>
+                        <a href="#" style="background:#eee; padding:4px 10px; border-radius:4px; font-size:0.85rem;">都市传说</a>
+                        <a href="#" style="background:#eee; padding:4px 10px; border-radius:4px; font-size:0.85rem;">心理惊悚</a>
+                        <a href="#" style="background:#eee; padding:4px 10px; border-radius:4px; font-size:0.85rem;">恋爱喜剧</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 概念解析区 -->
+        <section class="concept-section">
+            <div class="container concept-grid">
+                <div class="concept-text">
+                    <h2>什么是“时间停止”题材？</h2>
+                    <p>“时间停止”是虚构作品中一种极具魅力的超能力设定。它通常指主角能够使周围环境、物体甚至其他人的时间流逝完全停滞，唯有自己保持行动自由。这种设定为故事提供了独特的叙事空间和戏剧张力。</p>
+                    <p>在作品中，时间停止往往被赋予不同的限制条件：是全静止还是仅物体静止？是持续几秒还是几分钟？主角在静止世界中能做什么？这些问题构成了该题材的核心看点。</p>
+                    
+                    <div class="concept-steps">
+                        <div class="step-item">
+                            <div class="step-icon">1</div>
+                            <div>
+                                <h4>获得能力</h4>
+                                <p style="font-size:0.9rem; color:#666;">主角通常因意外事故、神秘物品或基因突变获得此能力。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">2</div>
+                            <div>
+                                <h4>探索世界</h4>
+                                <p style="font-size:0.9rem; color:#666;">利用静止时间观察细节、整理物品或进行私密行动。</p>
+                            </div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-icon">3</div>
+                            <div>
+                                <h4>应对危机</h4>
+                                <p style="font-size:0.9rem; color:#666;">在危险降临前通过时间停止进行躲避或反击。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="concept-image">
+                    <img src="https://picsum.photos/seed/timeconcept/600/400" alt="时间停止概念图" style="width:100%; border-radius:8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="font-size:0.9rem; line-height:1.6;">本站致力于收录和解析全球范围内优秀的“时间停止”题材作品，为读者提供高质量的阅读指南与社区交流平台。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">最新更新</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">投稿专区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关分类</h4>
+                    <ul>
+                        <li><a href="#">都市异能</a></li>
+                        <li><a href="#">科幻小说</a></li>
+                        <li><a href="#">日系漫画</a></li>
+                        <li><a href="#">动画解析</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">加入社群</a></li>
+                        <li><a href="#">商务合作</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 时间停止系列专题站 版权所有. 仅供学习与交流使用.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                              </html>
